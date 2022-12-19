@@ -11,6 +11,29 @@
 body {
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
+}
+header{
+  display: flex;
+  width: 100vw;
+  z-index: 10000;
+  position: fixed;
+  justify-content: space-around;
+  top: 0;
+}
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header img{
+  width: 10rem;
+}
+header li{
+  padding-right: 3rem;
+}
+header li:hover{
+  color: #93d4ff;
 }
 .enter{
     width: 100vw;
@@ -61,20 +84,35 @@ main {
     position: absolute;
 }
 .about-me{
-    background-color: rgb(199, 153, 252);
+  background-image: url("https://i.pinimg.com/originals/4e/f7/da/4ef7dae19f52af9ff5acc58d8aed9ccd.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
     width: 100vw;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+a{
+  text-decoration: none;
+}
+a:hover{
+  color: black;
+}
+.text-box img{
+  width: 2rem;
+  margin-bottom: 2px;
+  margin-right: 1rem;
+  
+}
 .about-me:nth-child(1) {
   color: #446969;
 }
 .about-me:nth-child(2) {
   color: #42455a;
-  background: #232323;;
+  background-image: url("https://i.pinimg.com/originals/4e/f7/da/4ef7dae19f52af9ff5acc58d8aed9ccd.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .about-me:nth-child(3) {
   color: #e0ffff;
@@ -97,18 +135,35 @@ main {
 }
 .about-me .text-container {
   display: flex;
+  
 }
 .about-me .text-container .text-box {
   margin: 20px;
   padding: 20px;
   background: #0069cb;
+  min-width: 15vw;
+  max-width: 21vw;
+}
+.about-me .text-container .text-box h4,a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+.about-me .text-container .text-box .locked .a{
+  color: #8a858598;
+  padding-top: 10px;
+}
+.gg-lock{
+  margin-right: 13px;
+  margin-bottom: 3px;
 }
 .text-container .text-box:hover {
     transition: all;
     transform: scale(1.1);
     background-color: rgb(255, 255, 255);
 }
-.text-container .text-box:hover h3,p {
+.text-container .text-box:hover h3,p,h4 {
     color: rgb(33, 33, 54);
 }
 .about-me .text-container .text-box h3 {
@@ -117,7 +172,13 @@ main {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-
+.about-me .text-container .text-box li {
+  color: rgb(33, 33, 54);
+  padding: 6px;
+}
+li{
+  list-style:none;
+}
 @media (max-width: 900px) {
   .about-me h1 {
     font-size: 2rem;
@@ -258,8 +319,8 @@ main .box button {
   
   .container .card{
     position: relative;
-    width: 320px;
-    height: 450px;
+    width: 400px;
+    height: 600px;
     background: #232323;
     border-radius: 20px;
     overflow: hidden;
