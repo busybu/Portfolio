@@ -491,4 +491,8 @@ main .box button {
     transition-delay: 0.75s;
     
   }
+  .projects{
+    width: 100vh;
+    height: 100vh;
+  }
   
